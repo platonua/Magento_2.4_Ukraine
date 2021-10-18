@@ -1,0 +1,35 @@
+
+<div class="payment-method" data-bind="css: {'_active': (getCode() == isChecked())}">
+    <div class="payment-method-title field choice">
+        <input type="radio"
+               name="payment[method]"
+               class="radio"
+               data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
+        <div style="align-items:center; display: contents; -webkit-flex-flow: wrap row; flex-flow: wrap row; ">
+            <img src="https://platon.ua/wp-content/uploads/2018/05/visa-hd.png.pagespeed.ce.8ukhI3Xp13.png" style="height: 20px;margin: 3px; vertical-align: middle">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1280px-Mastercard_2019_logo.svg.png" style="height: 20px;margin: 3px;vertical-align: middle">
+            <img src="https://platon.ua/wp-content/uploads/2018/05/logo_prostir-3.png.pagespeed.ce.3N9C3rGqxz.png" style="height: 20px;margin: 3px;vertical-align: middle">
+            <img src="https://platon.ua/wp-content/uploads/2018/05/privat24-e1502794286516-6-1.png.pagespeed.ce.-W9boZKW7J.png" style="height: 20px;margin: 3px;vertical-align: middle">
+            <img src="https://www.apple.com/ru/apple-pay/images/shared/hero_logo_small.jpg" style="height: 20px;margin: 3px;vertical-align: middle">
+
+            <div style="float: right"> By <img src="https://platon.ua/wp-content/uploads/2018/08/logo-new.png.pagespeed.ce.j02O6YszsP.png" style="height: 20px;margin: 3px;vertical-align: middle"></div>
+        </div>
+    </div>
+    <div class="payment-method-content">
+        <span data-bind="text: getPolicy()">
+
+        </span>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button class="action primary checkout"
+                        type="submit"
+                        data-bind="
+                        click: placeOrder,
+                        attr: {title: $t('Place Order')}
+                        ">
+                    <span data-bind="i18n: 'Place Order'"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
